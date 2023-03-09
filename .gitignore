@@ -2,8 +2,8 @@
 **/.terraform/*
 
 # .tfstate files
-*.tfstate
-*.tfstate.*
+#*.tfstate
+#*.tfstate.*
 
 # Crash log files
 crash.log
@@ -13,10 +13,10 @@ crash.*.log
 # password, private keys, and other secrets. These should not be part of version 
 # control as they are data points which are potentially sensitive and subject 
 # to change depending on the environment.
-*.tfvars
-*.tfvars.json
+#*.tfvars
+#*.tfvars.json
 
-# Ignore override files as they are usually used to override resources locally and so
+# Ignore override files as they are usually used to override resources locally and .terraform/providers/registry.terraform.io/hashicorp/aws/3.73.0/linux_amd64/terraform-provider-aws_v3.73.0_x5
 # are not checked in
 override.tf
 override.tf.json
