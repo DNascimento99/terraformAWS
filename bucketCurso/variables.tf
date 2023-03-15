@@ -1,9 +1,9 @@
-##Main
-variable "terraform_version" {
-  type        = string
-  description = "Versão Terraform"
-  default     = "v1.39.9"
-}
+##Main 
+#variable "terraform_version" {
+  #type        = string
+  #description = "Versão Terraform"
+  #default     = "v1.39.9"
+#}
 variable "region_name" {
   type        = string
   description = "Nome da região"
