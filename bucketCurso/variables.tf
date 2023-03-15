@@ -1,9 +1,9 @@
 ##Main 
-#variable "terraform_version" {
-  #type        = string
-  #description = "Versão Terraform"
-  #default     = "v1.39.9"
-#}
+/* variable "terraform_version" {
+  type        = string
+  description = "Versão Terraform"
+  default     = "1.39.0"
+} */
 variable "region_name" {
   type        = string
   description = "Nome da região"
@@ -15,10 +15,15 @@ variable "profile_name" {
   default     = "default"
 }
 ##Bucket
-variable "bucket_name" {
+variable "bucket_name_1" {
   type        = string
   description = "Nome do bucket"
-  default     = "bucket-danielnascimento-terrafromwithaws"
+  default     = "bucket-danielnascimento-terrafromwithaws-1"
+}
+variable "bucket_name_2" {
+  type        = string
+  description = "Nome do bucket"
+  default     = "bucket-danielnascimento-terrafromwithaws-2"
 }
 variable "bucket_tags" {
   type        = map(string)
@@ -55,4 +60,34 @@ variable "instance_tags" {
     Create    = "10-03-2023"
     ManagedBy = "Terraform"
   }
+}
+##Usuário IAM
+variable "iam_name" {
+  type        = string
+  description = "Nome do usuário IAM"
+  default     = "daniel-testes"
+}
+variable "iam_path" {
+  type        = string
+  description = "Caminho da pasta do usuário"
+  default     = "/system/"
+}
+variable "iam_force_destroy" {
+  type        = bool
+  description = "Força destruíção de qualquer alteração feita"
+  default     = "true"
+}
+variable "iam_tags" {
+  type        = map(string)
+  description = "Tags do usuário IAM"
+  default = {
+    Create    = "15-03-22"
+    ManagedBy = "Terraform"
+  }
+}
+##Policy
+variable "policy_name" {
+  type        = string
+  description = "Criação policy de descrição de uma EC2"
+  default     = "Policy_access_describe_EC2"
 }
