@@ -6,4 +6,7 @@ resource "aws_iam_user" "user_daniel_testes" {
 }
 resource "aws_iam_access_key" "key_daniel_testes" {
   user = var.iam_name
+  depends_on = [
+    aws_iam_user.user_daniel_testes
+  ]
 }
