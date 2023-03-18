@@ -85,9 +85,29 @@ variable "iam_tags" {
     ManagedBy = "Terraform"
   }
 }
+variable "iam_profile_name" {
+  type        = string
+  description = "Nome do profile do iam"
+  default     = "profile-name"
+}
+variable "iam_role_name" {
+  type        = string
+  description = "Nome da role do iam"
+  default     = "role-name"
+}
 ##Policy
 variable "policy_name" {
   type        = string
   description = "Criação policy de descrição de uma EC2"
   default     = "Policy_access_describe_EC2"
+}
+variable "policy_iam_name" {
+  type        = string
+  description = "Criação policy de descrição de uma EC2"
+  default     = "iam_assume_role"
+}
+variable "policy_role_name" {
+  type        = string
+  description = "Criação policy de descrição de uma EC2"
+  default     = "my-policy"
 }

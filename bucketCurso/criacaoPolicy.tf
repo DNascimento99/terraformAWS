@@ -1,4 +1,4 @@
-resource "aws_iam_user_policy" "policy_daniel_testes" {
+/* resource "aws_iam_user_policy" "policy_daniel_testes" {
   name = var.policy_name
   user = var.iam_name
   depends_on = [
@@ -16,4 +16,18 @@ resource "aws_iam_user_policy" "policy_daniel_testes" {
       },
     ]
   })
+} */
+data "aws_iam_policy_document" "assume_role" {
+  statement {
+    effect = "Allow"
+    principals {
+      type        = "Service"
+      identifiers = ["ec2.amazonaws.com"]
+    }
+    principals {
+      type        = "AWS"
+      identifiers = ["arn:aws:iam::128725694222:root"]
+    }
+    actions = ["sts:AssumeRole"]
+  }
 }
