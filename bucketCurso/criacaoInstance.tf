@@ -6,7 +6,4 @@ resource "aws_instance" "linux_instance" {
   instance_type        = var.instance_type
   tags                 = var.instance_tags
   iam_instance_profile = var.iam_profile_name
-  depends_on = [
-    aws_iam_user.user_daniel_testes
-  ]
 }

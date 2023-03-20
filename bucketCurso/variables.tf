@@ -98,16 +98,6 @@ variable "iam_role_name" {
 ##Policy
 variable "policy_name" {
   type        = string
-  description = "Criação policy de descrição de uma EC2"
-  default     = "Policy_access_describe_EC2"
-}
-variable "policy_iam_name" {
-  type        = string
-  description = "Criação policy de descrição de uma EC2"
-  default     = "iam_assume_role"
-}
-variable "policy_role_name" {
-  type        = string
-  description = "Criação policy de descrição de uma EC2"
-  default     = "my-policy"
+  description = "Nome da policy"
+  default     = "policy-name"
 }
