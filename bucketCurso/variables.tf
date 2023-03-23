@@ -2,12 +2,7 @@ variable "envinroment" {
   type        = string
   description = ""
 }
-##Main 
-/* variable "terraform_version" {
-  type        = string
-  description = "Versão Terraform"
-  default     = "1.39.0"
-} */
+##Main
 variable "region_name" {
   type        = string
   description = "Nome da região"
