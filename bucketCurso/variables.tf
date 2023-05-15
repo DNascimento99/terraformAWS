@@ -24,10 +24,6 @@ variable "bucket_tags" {
   type        = map(string)
   description = "Tags para o bucket"
 }
-variable "bucket_type_acl" {
-  type        = string
-  description = "Tipo da ACL do bucket"
-}
 ##Instância
 variable "instance_ami" {
   type        = string
